@@ -1,0 +1,32 @@
+HEM Utilities — Icon & Illustration Reference
+================================================
+This file documents the custom inline SVGs used across the prototype so they
+stay consistent. All icons use currentColor / CSS vars so they recolor with
+the theme automatically (white-blue, no dark mode needed).
+
+ICONS USED:
+- bolt (electricity)
+- droplet (water)
+- leaf (environment)
+- meter-gauge (AMI / metering)
+- network-nodes (automation / IoT / SCADA)
+- shield-check (advisory / compliance / ISO)
+- building (utilities/government clients)
+- chart-up (revenue/performance improvement)
+- map-pin (GIS/survey)
+- file-doc (DPR/project planning)
+- users (CRM/customer)
+- satellite (GPS/drone survey)
+- chevron-down (nav dropdown indicator)
+- arrow-right (CTA links)
+- check (checklist)
+- mail / phone / pin (contact)
+- social: facebook, twitter/x, youtube, linkedin
+
+ILLUSTRATIONS (full-scene SVGs, built per page):
+- hero-grid-bg.svg-inline: animated transmission line + pylon silhouette + pulse dot traveling the line (home hero)
+- electricity-illustration: substation/pylon scene with glowing nodes
+- water-illustration: pipe network + droplet + treatment tank scene
+- environment-illustration: leaf/eco-circuit hybrid scene
+- about-illustration: org/building blueprint scene
+- services-illustration: dashboard/automation scene with floating data cards

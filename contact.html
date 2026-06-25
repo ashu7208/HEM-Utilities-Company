@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — HEM Utilities</title>
+<meta name="description" content="Get in touch with HEM Utilities. Registered and corporate office addresses, phone and email contact details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; }
+  .office-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-m);
+    padding: 26px; margin-bottom: 18px; display: flex; gap: 16px;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .office-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .office-card .oico { width: 44px; height: 44px; border-radius: 10px; background: var(--slate); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .office-card .oico svg { width: 22px; height: 22px; stroke: var(--cobalt); }
+  .office-card h4 { font-size: 15.5px; margin-bottom: 6px; }
+  .office-card p { font-size: 14.5px; color: var(--graphite-soft); margin:0; line-height: 1.6; }
+  .contact-row { display: flex; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-row .cico { width: 42px; height: 42px; border-radius: 50%; background: var(--navy); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .contact-row .cico svg { width: 18px; height: 18px; stroke: var(--cyan); }
+  .contact-row a, .contact-row span.val { font-weight: 600; color: var(--navy); font-size: 15.5px; }
+  .contact-row .lbl { font-size: 12.5px; color: var(--graphite-soft); display:block; margin-bottom:2px; }
+  .map-frame {
+    border-radius: var(--radius-l); overflow: hidden; height: 100%; min-height: 420px;
+    border: 1px solid var(--line); position: relative;
+  }
+  .form-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-l);
+    padding: 36px; box-shadow: var(--shadow-sm);
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 13.5px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+  .form-group input, .form-group textarea {
+    width: 100%; padding: 13px 16px; border: 1.5px solid var(--line); border-radius: var(--radius-s);
+    font-family: var(--font-body); font-size: 14.5px; color: var(--graphite);
+    transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    background: var(--slate);
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--cobalt); box-shadow: 0 0 0 4px rgba(30,111,224,0.1); background: white;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark"><span class="loader-pulse"></span>HEM UTILITIES</div></div>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#13C4E8"/></svg></span>
+      <span>HEM UTILITIES<small>Electricity · Water · Environment</small></span>
+    </a>
+    <nav class="main-nav">
+      <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+      <div class="nav-item has-dropdown">
+        <a href="about.html" class="nav-link">About Us
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="about.html#overview"><span class="dot"></span>Company Overview</a>
+          <a href="about.html#leadership"><span class="dot"></span>Leadership</a>
+          <a href="about.html#information"><span class="dot"></span>Company Information</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="industries.html" class="nav-link">Industries
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="industries.html#electricity"><span class="dot"></span>Electricity</a>
+          <a href="industries.html#water"><span class="dot"></span>Water</a>
+          <a href="industries.html#environment"><span class="dot"></span>Environment</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="services.html" class="nav-link">What We Do
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="services.html#technologies"><span class="dot"></span>Technologies &amp; Solutions</a>
+          <a href="services.html#projects"><span class="dot"></span>Projects &amp; Services</a>
+          <a href="services.html#advisory"><span class="dot"></span>Advisory &amp; Consultancy</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></div>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact Us</span></div>
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Let's talk about your project</h1>
+      <p>Reach out for technology, project execution, or advisory enquiries — our team typically responds within one business day.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrap">
+
+        <div class="reveal in">
+          <div class="office-card">
+            <div class="oico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke-width="1.6"/></svg></div>
+            <div><h4>Registered Office</h4><p>401, Oriental Heights, Plot No. 158, Sector 44, Seawoods, Navi Mumbai 400706.</p></div>
+          </div>
+          <div class="office-card">
+            <div class="oico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 21V9l8-6 8 6v12" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke-width="1.6"/></svg></div>
+            <div><h4>Corporate Office</h4><p>4th Floor, Institution of Engineers, Belapur Local Center, Plot No. 106, Sector-15, C.B.D.-Belapur, Navi Mumbai, 400614.</p></div>
+          </div>
+
+          <div class="office-card" style="display:block;">
+            <div class="contact-row">
+              <div class="cico"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+              <div><span class="lbl">Email</span><a href="mailto:cmd@hemutilities.com">cmd@hemutilities.com</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="cico"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2C9.6 21 3 14.4 3 6a2 2 0 012-2z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+              <div><span class="lbl">Phone</span><a href="tel:02227560373">022-2756 0373</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal in reveal-delay-1">
+          <div class="form-card">
+            <h3 style="margin-bottom:6px;">Send us a message</h3>
+            <p style="color:var(--graphite-soft); font-size:14.5px; margin-bottom:24px;">Fill in the form and our team will get back to you shortly.</p>
+            <form onsubmit="return false;">
+              <div class="form-row">
+                <div class="form-group"><label for="cname">Full name</label><input id="cname" type="text" placeholder="Your name"></div>
+                <div class="form-group"><label for="cemail">Email</label><input id="cemail" type="email" placeholder="you@company.com"></div>
+              </div>
+              <div class="form-group"><label for="csubject">Subject</label><input id="csubject" type="text" placeholder="What would you like to discuss?"></div>
+              <div class="form-group"><label for="cmsg">Message</label><textarea id="cmsg" rows="5" placeholder="Tell us a bit about your project or enquiry..."></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;"><span>Send Message</span>
+                <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-slate">
+    <div class="container">
+      <div class="section-head reveal in">
+        <span class="eyebrow">Find Us</span>
+        <h2>Visit our corporate office in CBD Belapur</h2>
+      </div>
+      <div class="map-frame reveal in">
+        <iframe
+          src="https://maps.google.com/maps?q=hem%20utilities&t=m&z=15&output=embed&iwloc=near"
+          width="100%" height="420" style="border:0; display:block;"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="HEM Utilities office location map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#13C4E8"/></svg></span>
+          <span>HEM UTILITIES</span>
+        </a>
+        <p>A multi-domain knowledge company delivering technologies, projects and advisory services across Electricity, Water and Environment sectors.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M15 8.5h2V5.6c-.34-.05-1.5-.15-2.86-.15-2.84 0-4.64 1.73-4.64 4.9V13H7v3h2.5v8h3.2v-8h2.7l.4-3h-3.1V10.5c0-.87.23-1.47 1.5-1.47z" fill="white"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4l7.2 9.6L4.4 20H6l5.4-5.6L16 20h4l-7.5-10L19 4h-1.6l-5 5.2L8 4H4z" fill="white"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="white" stroke-width="1.5"/><path d="M11 9.5l4 2.5-4 2.5v-5z" fill="white"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/><path d="M8 10v6M8 7.5v.01M12 16v-3.5c0-1.5 1-2.2 2-2.2s2 .7 2 2.2V16" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html#overview">Company Overview</a>
+        <a href="about.html#leadership">Leadership</a>
+        <a href="about.html#information">Company Information</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <a href="industries.html#electricity">Electricity</a>
+        <a href="industries.html#water">Water</a>
+        <a href="industries.html#environment">Environment</a>
+      </div>
+      <div class="footer-col">
+        <h5>Registered Office</h5>
+        <a href="contact.html" style="margin-bottom:8px;">401, Oriental Heights, Plot No. 158, Sector 44, Seawoods, Navi Mumbai 400706</a>
+        <a href="tel:02227560373">022-2756 0373</a>
+        <a href="mailto:cmd@hemutilities.com">cmd@hemutilities.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HEM Utilities Pvt. Ltd. All rights reserved.</span>
+      <span>CIN: U74900MH2013PTC251394 · ISO 9001:2015</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><svg viewBox="0 0 16 16" fill="none"><path d="M8 13V3M3 7l5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
